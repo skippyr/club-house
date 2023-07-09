@@ -24,5 +24,5 @@ function _club_house::branch {
       echo "%F{3}git:(%F{2}${branch}%F{3}) "
 }
 
-PROMPT='%# $(_club_house::venv)%F{4}$(_club_house::pwd) $(_club_house::branch)%F{1}󱢟 %f '
+PROMPT='%# $(_club_house::venv)%(?..%F{2}*%? )%F{4}$(_club_house::pwd) $(_club_house::branch)%F{1}󱢟 %f '
 

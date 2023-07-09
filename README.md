@@ -13,6 +13,8 @@ The Club House project is a theme for the ZSH shell with Git support.
 
 This theme can show you the following information:
 
+-   If you are root or not.
+-   The exit code of the last command if it failed.
 -   The name of sourced virtual environments.
 -   Your current directory path abbreviated.
 -   If inside a Git repository, the name of the branch.
