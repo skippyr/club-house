@@ -1,7 +1,5 @@
 # Club House
 
-## Starting Point
-
 The Club House project is a theme for the ZSH shell with Git support.
 
 ![](images/preview.png)
@@ -19,7 +17,7 @@ This theme can show you the following information:
 -   Your current directory path abbreviated.
 -   If inside a Git repository, the name of the branch.
 
-## Dependencies
+## Installation
 
 This theme has some dependencies that you need to download before installing it.
 
@@ -32,9 +30,8 @@ This theme has some dependencies that you need to download before installing it.
 
     These fonts provides all pretty symbols used in this theme.
 
-## Installation
-
-You can install this theme in multiple ways, use the one that suits you best.
+After you have installed the dependencies, you need to decide a way to install
+the theme, use the one that suits you best.
 
 ### Manually
 
@@ -65,10 +62,9 @@ You can install this theme in multiple ways, use the one that suits you best.
 
 -   Reopen your terminal emulator.
 
-## Issues And Contributions
+## Issues And Suggestions
 
-Learn how to report issues and contribute to this project by reading its
-[contributions guidelines](https://skippyr.github.io/materials/pages/contributions_guidelines.html).
+Report issues and suggestions through the [issues tab](https://github.com/skippyr/club_house/issues).
 
 ## License
 
