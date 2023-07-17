@@ -7,6 +7,7 @@ A theme for the ZSH shell that its decorated by a cards club symbol.
 ![](images/preview.png)
 
 > **Note**
+>
 > The theme may look different in your setup as its appearance depends of what
 > colors and font you are using for your terminal emulator. Use the preview as
 > just a reference.
@@ -42,8 +43,8 @@ Use the following instructions to install this theme manually.
 ```bash
 git clone --depth=1 https://github.com/skippyr/club-house\
                     ~/.local/share/zsh/themes/club-house &&
-printf "%s%s\n" "source \"~/.local/share/zsh/themes/club-house/"\
-       "club-house.zsh-theme\"" >> ~/.zshrc
+echo "source ~/.local/share/zsh/themes/club-house/club-house.zsh-theme" >>\
+     ~/.zshrc
 ```
 
 -	Reopen the terminal emulator to load the theme.
