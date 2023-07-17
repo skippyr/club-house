@@ -1,74 +1,80 @@
 # Club House
 
-The Club House project is a theme for the ZSH shell with Git support.
+## Description
+
+A theme for the ZSH shell that its decorated by a cards club symbol.
 
 ![](images/preview.png)
 
-> Colors will be different depending of your terminal emulator's theme. The
-> theme used is [Flamerial](https://github.com/skippyr/flamerial).
+> **Note**
+> The theme may look different in your setup as its appearance depends of what
+> colors and font you are using for your terminal emulator. Use the preview as
+> just a reference.
 
-## Features
-
-This theme can show you the following information:
-
--   If you are root or not.
--   The exit code of the last command if it failed.
--   The name of sourced virtual environments.
--   Your current directory path abbreviated.
--   If inside a Git repository, the name of the branch.
+Here is the description of its design:
+-	A decorator will tell your user privileges: it will be `%` if you are a
+	normal user or `#`, if you are `root`.
+-	Virtual environments that you have sourced will appear inside parenthesis.
+	For example: `(venv)`.
+-	If your last command failed, its exit code will appear prefixed by `*`. For
+	example: `*130`.
+-	Your current directory will appear abbreviated: for parent directories, only
+	their initials will be used.
+-	If inside a Git repository, the current branch will appear inside
+	parenthesis and prefixed by `git:`. For example: `git:(main)`.
 
 ## Installation
 
-This theme has some dependencies that you need to download before installing it.
+### Dependencies
 
--   git
+The following dependencies must be installed to run this software:
 
-    This is the terminal utility used to obtain information about your Git
-    repositories.
+| Dependency | Description |
+|-|-|
+| `git` | Required to retrive information about Git repositories. |
+| A [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/releases)' font | Provides the required pretty symbols. |
 
--   A font patched by the Nerd Fonts project.
+### Manual Procedures
 
-    These fonts provides all pretty symbols used in this theme.
+Use the following instructions to install this theme manually.
 
-After you have installed the dependencies, you need to decide a way to install
-the theme, use the one that suits you best.
+-	Run the following command inside of a terminal emulator to install the theme.
+```bash
+git clone --depth=1 https://github.com/skippyr/club-house\
+                    ~/.local/share/zsh/themes/club-house &&
+printf "%s%s\n" "source \"~/.local/share/zsh/themes/club-house/"\
+       "club-house.zsh-theme\"" >> ~/.zshrc
+```
 
-### Manually
+-	Reopen the terminal emulator to load the theme.
 
--   Run the following command to install the theme at
-    `~/.local/share/zsh/themes/club_house`.
+### Procedures With OhMyZSH
 
-    ```bash
-    git clone --depth=1 https://github.com/skippyr/club_house ~/.local/share/zsh/themes/club_house &&
-    echo "source \"${HOME}/.local/share/zsh/themes/club_house/club_house.zsh-theme\"" >> ~/.zshrc
-    ```
+Use the following instructions to install this theme for OhMyZSH.
 
--   Reopen your terminal emulator.
+-	Run the following command inside of a terminal emulator to install the theme.
 
-### Within OhMyZSH
+```bash
+git clone --depth=1 https://github.com/skippyr/club-house\
+                    ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/club-house
+```
 
--   Install the theme in OhMyZSH custom themes' directory.
+-	Change the value of the `ZSH_THEME` variable in your ZSH configuration file,
+	`~/.zshrc`, to use the theme:
 
-    ```bash
-    git clone --depth=1 https://github.com/skippyr/club_house ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/club_house
-    ```
+```bash
+ZSH_THEME=club-house/club-house
+```
 
--   Change the value of the `ZSH_THEME` variable in your ZSH configuration file,
-    `~/.zshrc`, to use the theme.
+-	Reopen your terminal emulator to load the theme.
 
-    ```bash
-    ZSH_THEME="club_house/club_house"
-    ```
+## Support
 
--   Reopen your terminal emulator.
+Report issues, questions and suggestion through the [issues tab](https://github.com/skippyr/club-house).
 
-## Issues And Suggestions
+## Copyright
 
-Report issues and suggestions through the [issues tab](https://github.com/skippyr/club_house/issues).
-
-## License
-
-This project is released under the terms of the MIT license. A copy of the
-license is bundled with the source code.
+This software is distributed under the MIT License. A copy of the license is
+bundled with the source code.
 
 Copyright (c) 2023, Sherman Rofeman. MIT license.
