@@ -5,8 +5,7 @@ __Club_House()
 {
 	Get_Virtual_Environment()
 	{
-		typeset -r v=${VIRTUAL_ENV##*/}
-		[[ -n $v ]] && echo "($v) "
+		[[ -n ${VIRTUAL_ENV} ]] && echo "(${VIRTUAL_ENV##*/}) "
 	}
 
 	Get_Directory()
