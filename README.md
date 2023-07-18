@@ -73,7 +73,7 @@ ZSH_THEME=club-house/club-house
 
 ## Support
 
-Report issues, questions and suggestion through the [issues tab](https://github.com/skippyr/club-house).
+Report issues, questions and suggestion through the [issues tab](https://github.com/skippyr/club-house/issues).
 
 ## Copyright
 
