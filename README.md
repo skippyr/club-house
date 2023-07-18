@@ -11,6 +11,8 @@ A theme for the ZSH shell that its decorated by a cards club symbol.
 > The theme may look different in your setup as its appearance depends of what
 > colors and font you are using for your terminal emulator. Use the preview as
 > just a reference.
+>
+> Theme used for terminal emulator is [Flamerial](https://github.com/skippyr/flamerial).
 
 Here is the description of its design:
 -	A decorator will tell your user privileges: it will be `%` if you are a
