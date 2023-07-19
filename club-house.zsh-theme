@@ -5,7 +5,7 @@ __Club_House()
 {
 	Get_Virtual_Environment()
 	{
-		[[ -n ${VIRTUAL_ENV} ]] && echo "(${VIRTUAL_ENV##*/}) "
+		[[ ${VIRTUAL_ENV} ]] && echo "(${VIRTUAL_ENV##*/}) "
 	}
 
 	Get_Directory()
@@ -20,7 +20,7 @@ __Club_House()
 	Get_Branch()
 	{
 		typeset -r b=$(git branch --show-current 2>/dev/null)
-		[[ -n $b ]] && echo "%F{3}git:(%F{2}$b%F{3}) "
+		[[ ${b} ]] && echo "%F{3}git:(%F{2}${b}%F{3}) "
 	}
 
 	echo "%# $(Get_Virtual_Environment)%(?..%F{2}*%? )%F{4}$(Get_Directory)"\
@@ -28,3 +28,4 @@ __Club_House()
 }
 
 PROMPT='$(__Club_House)'
+
