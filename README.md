@@ -1,83 +1,84 @@
 # Club House
 
-## Description
+## About
 
-A theme for the ZSH shell that its decorated by a cards club symbol.
+A theme for the ZSH shell that is decorated by a cards club symbol.
 
-![](images/preview.png)
+![](preview.png)
 
 > **Note**
 >
-> The theme may look different in your setup as its appearance depends of what
-> colors and font you are using for your terminal emulator. Use the preview as
-> just a reference.
->
-> Theme used for terminal emulator is [Flamerial](https://github.com/skippyr/flamerial).
+> The theme may look different from the preview in your setup, as its
+> appeareance also depends on your terminal emulator's theme and font. The
+> theme used is [Flamerial](https://github.com/skippyr/flamerial).
 
-Here is the description of its design:
--	A decorator will tell your user privileges: it will be `%` if you are a
-	normal user or `#`, if you are `root`.
--	Virtual environments that you have sourced will appear inside parenthesis.
-	For example: `(venv)`.
--	If your last command failed, its exit code will appear prefixed by `*`. For
-	example: `*130`.
--	Your current directory will appear abbreviated: for parent directories, only
-	their initials will be used.
--	If inside a Git repository, the current branch will appear inside
-	parenthesis and prefixed by `git:`. For example: `git:(main)`.
+### Features
+
+These are the features this theme brings on:
+
+-   It shows if you are the `root` user or not.
+-   It shows the name of sourced virtual environment.
+-   It shows your current directory path abbreviating parent directories by
+    their initials.
+-   If inside a Git repository, it shows the name of the branch.
 
 ## Installation
 
 ### Dependencies
 
-The following dependencies must be installed to run this software:
+This software requires that the following dependencies are installed to run
+properly:
 
 | Dependency | Description |
 |-|-|
-| `git` | Required to retrive information about Git repositories. |
-| A [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/releases)' font | Provides the required pretty symbols. |
+| `git` | required to provide support to Git repositories. | 
+| [A Nerd Font's font](https://www.nerdfonts.com/font-downloads) | provides the required pretty symbols. |
 
-### Manual Procedures
+### Procedures
 
-Use the following instructions to install this theme manually.
+Using a terminal emulator, follow these steps:
 
--	Run the following command inside of a terminal emulator to install the theme.
-```bash
-git clone --depth=1 https://github.com/skippyr/club-house\
-                    ~/.local/share/zsh/themes/club-house &&
-echo "source ~/.local/share/zsh/themes/club-house/club-house.zsh-theme" >>\
-     ~/.zshrc
-```
-
--	Reopen the terminal emulator to load the theme.
-
-### Procedures With OhMyZSH
-
-Use the following instructions to install this theme for OhMyZSH.
-
--	Run the following command inside of a terminal emulator to install the theme.
+-   Clone this repository.
 
 ```bash
-git clone --depth=1 https://github.com/skippyr/club-house\
-                    ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/club-house
+git\
+    clone --depth=1 https://github.com/skippyr/club-house\
+    ~/.local/share/zsh/themes/club-house
 ```
 
--	Change the value of the `ZSH_THEME` variable in your ZSH configuration file,
-	`~/.zshrc`, to use the theme:
+-   Add the following source rule to your `~/.zshrc` file. Ensure that you are
+    not sourcing any other theme to do not cause conflicts.
 
 ```bash
-ZSH_THEME=club-house/club-house
+source ~/.local/share/zsh/themes/club-house/club-house.zsh-theme
 ```
 
--	Reopen your terminal emulator to load the theme.
+-   Reopen your terminal emulator to reload your ZSH session in order to load
+    the theme.
+
+## Uninstallation
+
+Using a terminal emulator, follow these steps:
+
+-   Remove the theme's directory.
+
+```bash
+rm -rf ~/.local/share/zsh/themes/club-house
+```
+
+-   Remove the source rule that you have written in the `~/.zshrc` file during
+    the installation.
+-   Reopen your terminal emulator to reload your ZSH session in order to load
+    the default theme.
 
 ## Support
 
-Report issues, questions and suggestion through the [issues tab](https://github.com/skippyr/club-house/issues).
+Report issues, questions or suggestions through the [issues tab](https://github.com/skippyr/club-house/issues).
 
 ## Copyright
 
-This software is distributed under the MIT License. A copy of the license is
+This software is licensed under the MIT License. A copy of the license is
 bundled with the source code.
 
-Copyright (c) 2023, Sherman Rofeman. MIT license.
+Copyright (c) Sherman Rofeman. MIT license.
+
