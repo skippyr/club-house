@@ -1,7 +1,8 @@
 setopt promptsubst
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-__Club_House() {
+__Club_House()
+{
 	Get_Virtual_Environment()
 	{
 		[[ ${VIRTUAL_ENV} ]] && echo "(${VIRTUAL_ENV##*/}) "
