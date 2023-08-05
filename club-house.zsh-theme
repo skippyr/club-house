@@ -26,7 +26,7 @@ __Club_House() {
 	}
 
 	echo\
-		"%# $(get_virtual_environment)%(?..%F{2}*%? )%F{4}$(Get_Directory)"\
+		"%# $(Get_Virtual_Environment)%(?..%F{2}*%? )%F{4}$(Get_Directory)"\
 		"$(Get_Branch)%F{1}󱢟 %f "
 }
 
