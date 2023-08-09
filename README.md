@@ -17,8 +17,8 @@ The following dependencies must be installed to install this software properly:
 ### Procedures
 -   Clone this repository.
 ```bash
-git\
-    clone --depth=1 https://github.com/skippyr/club-house\
+git                                                                            \
+    clone --depth=1 https://github.com/skippyr/club-house                      \
     ~/.local/share/zsh/themes/club-house
 ```
 

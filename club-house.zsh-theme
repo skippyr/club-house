@@ -26,8 +26,8 @@ __Club_House()
         [[ ${branch} ]] && echo "%F{3}git:(%F{2}${branch}%F{3}) "
     }
 
-    echo\
-        "%# $(Get_Virtual_Environment)%(?..%F{2}*%? )%F{4}$(Get_Directory)"\
+    echo                                                                       \
+        "%# $(Get_Virtual_Environment)%(?..%F{2}*%? )%F{4}$(Get_Directory)"    \
         "$(Get_Branch)%F{1}󱢟 %f "
 }
 
