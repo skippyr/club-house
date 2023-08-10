@@ -1,14 +1,14 @@
 setopt promptsubst
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-__Club_House()
+function __Club_House()
 {
-    Get_Virtual_Environment()
+    function Get_Virtual_Environment()
     {
         [[ ${VIRTUAL_ENV} ]] && echo "(${VIRTUAL_ENV##*/}) "
     }
 
-    Get_Directory()
+    function Get_Directory()
     {
         typeset -a directory_splits=("${(s./.)PWD/${HOME}/~}")
         [[ ${#directory_splits} -gt 1 ]] &&
@@ -20,7 +20,7 @@ __Club_House()
         echo ${(j./.)directory_splits}
     }
 
-    Get_Branch()
+    function Get_Branch()
     {
         typeset -r branch=$(git branch --show-current 2>/dev/null)
         [[ ${branch} ]] && echo "%F{3}git:(%F{2}${branch}%F{3}) "
