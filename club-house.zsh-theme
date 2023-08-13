@@ -1,15 +1,12 @@
 setopt promptsubst
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-function __Club_House()
-{
-	function Get_Virtual_Environment()
-	{
-		[[ ${VIRTUAL_ENV} ]] && echo "(${VIRTUAL_ENV##*/}) "
+function __Club_House() {
+	function Get_Virtual_Environment() {
+		[[ "${VIRTUAL_ENV}" ]] && echo "(${VIRTUAL_ENV##*/}) "
 	}
 
-	function Get_Directory()
-	{
+	function Get_Directory() {
 		typeset -a directory_splits=("${(s./.)PWD/${HOME}/~}")
 		[[ ${#directory_splits} -gt 1 ]] &&
 			for directory_split_index in {1..$((${#directory_splits} - 1))}; do
@@ -20,14 +17,13 @@ function __Club_House()
 		echo ${(j./.)directory_splits}
 	}
 
-	function Get_Branch()
-	{
+	function Get_Branch() {
 		typeset -r branch=$(git branch --show-current 2>/dev/null)
-		[[ ${branch} ]] && echo "%F{3}git:(%F{2}${branch}%F{3}) "
+		[[ "${branch}" ]] && echo "%F{3}git:(%F{2}${branch}%F{3}) "
 	}
 
-	echo                                                                        \
-		"%# $(Get_Virtual_Environment)%(?..%F{2}*%? )%F{4}$(Get_Directory)"      \
+	echo\
+		"%# $(Get_Virtual_Environment)%(?..%F{2}*%? )%F{4}$(Get_Directory)"\
 		"$(Get_Branch)%F{1}󱢟 %f "
 }
 
