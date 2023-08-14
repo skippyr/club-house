@@ -1,5 +1,6 @@
-setopt promptsubst
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+setopt promptsubst
 
 function __Club_House() {
     function Get_Virtual_Environment() {
