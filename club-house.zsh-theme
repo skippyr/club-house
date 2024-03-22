@@ -21,10 +21,10 @@ function _club_house {
 
   function get_branch {
     b=$(git branch --show-current 2>/dev/null)
-    [[ ${b} ]] && echo "%F{3}git:(%F{2}${b}$(stat_dirty)%F{3}) "
+    [[ ${b} ]] && echo "%F{3}git:(%F{1}${b}$(stat_dirty)%F{3}) "
   }
 
-  echo "%# $(get_venv)%(?..%F{2}*%? )%F{4}$(get_cwd) $(get_branch)%F{1}󱢟 %f "
+  echo "%# $(get_venv)%(?..%F{1}*%? )%F{4}$(get_cwd) $(get_branch)%F{1}󱢟 %f "
 }
 
 PROMPT='$(_club_house)'
