@@ -1,6 +1,6 @@
-export VIRTUAL_ENV_DISABLE_PROMPT=1
+export VIRTUAL_ENV_DISABLE_PROMPT=1;
 
-setopt promptsubst
+setopt promptsubst;
 
 function _clubHouse_writeVirtualEnvModule
 {
