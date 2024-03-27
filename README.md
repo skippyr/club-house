@@ -67,14 +67,14 @@ If you want to install and use this theme with the [`ohmyzsh`](https://github.co
 - Clone this repository using `git`:
 
 ```sh
-git clone --depth 1 https://github.com/skippyr/club-house\
+git clone --depth 1 https://github.com/skippyr/club-house \
                     ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/club-house;
 ```
 
 - Apply the theme in `~/.zshrc` configuration by setting the `ZSH_THEME` variable:
 
 ```zsh
-ZSH_THEME="club-house/club-house";
+ZSH_THEME=club-house/club-house;
 ```
 
 - Reopen `zsh`.
