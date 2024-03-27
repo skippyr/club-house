@@ -2,12 +2,12 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 setopt promptsubst
 
-function _clubHouse_writeVirtualEnvModule()
+function _clubHouse_writeVirtualEnvModule
 {
     [[ ${VIRTUAL_ENV} ]] && echo "(${VIRTUAL_ENV##*/}) ";
 }
 
-function _clubHouse_writePathModule()
+function _clubHouse_writePathModule
 {
     pathSplits=("${(s./.)PWD/${HOME}/~}");
     [[ ${#pathSplits} -gt 1 ]] &&
@@ -19,12 +19,12 @@ function _clubHouse_writePathModule()
     echo ${(j./.)pathSplits};
 }
 
-function _clubHouse_writeGitDirtyStatusModule()
+function _clubHouse_writeGitDirtyStatusModule
 {
     [[ $(git status -s 2>/dev/null) ]] && echo "*";
 }
 
-function _clubHouse_writeGitModule()
+function _clubHouse_writeGitModule
 {
     branch=$(git branch --show-current 2>/dev/null);
     [[ ${branch} ]] &&
