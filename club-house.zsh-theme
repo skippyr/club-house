@@ -32,5 +32,5 @@ function _clubHouse_writeVirtualEnvModule
     [[ ${VIRTUAL_ENV} ]] && echo "(${VIRTUAL_ENV##*/}) ";
 }
 
-PROMPT='%# $(_clubHouse_writeVirtualEnvModule)%(?..%F{red}*%? \
-)%F{blue}$(_clubHouse_writePathModule) $(_clubHouse_writeGitModule)%F{red}󱢟 %f ';
+PROMPT='%# $(_clubHouse_writeVirtualEnvModule)%(?..%F{red}*%? )%F{blue}$(_clubHouse_writePathModule) \
+$(_clubHouse_writeGitModule)%F{red}󱢟 %f ';
