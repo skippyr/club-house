@@ -2,19 +2,19 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1;
 
 setopt promptsubst;
 
-function _clubHouse_writeGitDirtyStatusModule
+function _ClubHouse_WriteGitDirtyStatusModule()
 {
     [[ $(git status -s 2>/dev/null) ]] && echo "*";
 }
 
-function _clubHouse_writeGitModule
+function _ClubHouse_WriteGitModule()
 {
     branch=$(git branch --show-current 2>/dev/null);
     [[ ${branch} ]] &&
-        echo "%F{yellow}git:(%F{red}${branch}$(_clubHouse_writeGitDirtyStatusModule)%F{yellow}) ";
+        echo "%F{yellow}git:(%F{red}${branch}$(_ClubHouse_WriteGitDirtyStatusModule)%F{yellow}) ";
 }
 
-function _clubHouse_writePathModule
+function _ClubHouse_WritePathModule()
 {
     pathSplits=("${(s./.)PWD/${HOME}/~}");
     [[ ${#pathSplits} -gt 1 ]] &&
@@ -27,10 +27,10 @@ function _clubHouse_writePathModule
     echo ${(j./.)pathSplits};
 }
 
-function _clubHouse_writeVirtualEnvModule
+function _ClubHouse_WriteVirtualEnvModule()
 {
     [[ ${VIRTUAL_ENV} ]] && echo "(${VIRTUAL_ENV##*/}) ";
 }
 
-PROMPT='%# $(_clubHouse_writeVirtualEnvModule)%(?..%F{red}*%? )%F{blue}$(_clubHouse_writePathModule) \
-$(_clubHouse_writeGitModule)%F{red}󱢟 %f ';
+PROMPT='%# $(_ClubHouse_WriteVirtualEnvModule)%(?..%F{red}*%? )%F{blue}$(_ClubHouse_WritePathModule) \
+$(_ClubHouse_WriteGitModule)%F{red}󱢟 %f ';
