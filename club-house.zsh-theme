@@ -3,13 +3,13 @@ setopt promptsubst;
 export VIRTUAL_ENV_DISABLE_PROMPT=1;
 
 _club_house_write_git_dirty_status_module() {
-    [[ $(git status -s 2>/dev/null) ]] && echo "*";
+  [[ $(git status -s 2>/dev/null) ]] && echo "*";
 }
 
 _club_house_write_git_module() {
-    branch=$(git branch --show-current 2>/dev/null);
-    [[ ${branch} ]] &&
-        echo "%F{yellow}git:(%F{red}${branch}$(_club_house_write_git_dirty_status_module)%F{yellow}) ";
+  branch=$(git branch --show-current 2>/dev/null);
+  [[ ${branch} ]] &&
+      echo "%F{yellow}git:(%F{red}${branch}$(_club_house_write_git_dirty_status_module)%F{yellow}) ";
 }
 
 _club_house_write_path_module() {
