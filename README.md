@@ -19,7 +19,7 @@ A theme for the `zsh` shell for Linux that is decorated by a cards club symbol.
 <p align="center">
   <img alt="" src="assets/preview.webp" />
 </p>
-<p align="center"><sup><strong>Caption:</strong> a preview of club-house applied on <code>zsh</code>. The terminal theme used is <a href="https://github.com/skippyr/flamerial">Flamerial</a> and font is <a href="https://www.nerdfonts.com/font-downloads">Fira Mono</a>.</sup></p>
+<p align="center"><sup><strong>Caption:</strong> a preview of club-house applied on <code>zsh</code>. The terminal theme used is <a href="https://github.com/skippyr/flamerial">Flamerial</a> and font is <a href="https://www.nerdfonts.com/font-downloads">Fira Mono (Nerd Fonts patched)</a>.</sup></p>
 
 ### Features
 
