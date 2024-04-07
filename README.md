@@ -38,7 +38,7 @@ It displays:
 The following dependencies must be installed before installing it:
 
 - **git**: it will be used to clone this repository.
-- **Noto Sans**, [**Nerd Font Symbols**](https://www.nerdfonts.com/font-downloads): these fonts provide the pretty symbols used in the theme.
+- **Noto Sans**, [**Nerd Font Symbols**](https://www.nerdfonts.com/font-downloads): these fonts provide the pretty symbols used by the theme.
 
 ### Procedures
 
@@ -71,7 +71,7 @@ git clone --depth 1 "https://github.com/skippyr/club-house" \
                     "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/club-house";
 ```
 
-- Apply the theme in `~/.zshrc` configuration file by setting the `ZSH_THEME` variable:
+- Apply the theme in your `~/.zshrc` configuration file by setting the `ZSH_THEME` variable:
 
 ```zsh
 ZSH_THEME="club-house/club-house";
