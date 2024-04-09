@@ -10,8 +10,7 @@ function _clubHouse_writeGitDirtyStatusModule()
 function _clubHouse_writeGitModule()
 {
 	branch=$(git branch --show-current 2>/dev/null);
-	[[ ${branch} ]] &&
-		echo "%F{yellow}git:(%F{red}${branch}$(_clubHouse_writeGitDirtyStatusModule)%F{yellow}) ";
+	[[ ${branch} ]] && echo "%F{yellow}git:(%F{red}${branch}$(_clubHouse_writeGitDirtyStatusModule)%F{yellow}) ";
 }
 
 function _clubHouse_writePathModule()
