@@ -16,15 +16,15 @@ function _clubHouse_writeGitModule()
 
 function _clubHouse_writePathModule()
 {
-	path_splits=("${(s./.)PWD/${HOME}/~}");
-	[[ ${#path_splits} -gt 1 ]] &&
-		for index in {1..$((${#path_splits} - 1))};
+	pathSplits=("${(s./.)PWD/${HOME}/~}");
+	[[ ${#pathSplits} -gt 1 ]] &&
+		for index in {1..$((${#pathSplits} - 1))};
 		do
-			[[ ${path_splits[index]} == .* ]] &&
-				path_splits[index]=${path_splits[index][1,2]} ||
-				path_splits[index]=${path_splits[index][1]};
+			[[ ${pathSplits[index]} == .* ]] &&
+				pathSplits[index]=${pathSplits[index][1,2]} ||
+				pathSplits[index]=${pathSplits[index][1]};
 		done
-	echo ${(j./.)path_splits};
+	echo ${(j./.)pathSplits};
 }
 
 function _clubHouse_writeVirtualEnvModule()
